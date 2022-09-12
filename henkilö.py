@@ -14,3 +14,7 @@ class Henkilö:
         print("Ai, olet", self.ikä(), "vuotta vanha.")
         print("Lempivärisi on siis", lempiväri)
         return self.syntymävuosi
+
+    def __repr__(self):
+        pass
+        return "<Henkilö: "+self.nimi+">"
