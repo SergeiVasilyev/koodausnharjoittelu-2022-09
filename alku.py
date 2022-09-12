@@ -32,6 +32,12 @@ def henkilölistaus():
         lemmikit = henkilöiden_lemmikit.get(h.nimi, [])
         for lemmikki in lemmikit:
             print("Lemmikki:", lemmikki)
+        try:
+            print('Lempiväri ', henkilöiden_lempivärit[h.nimi])
+        except KeyError:
+            print('Ei lempiväriä tiedossa')
+        except NameError:
+            print('Koodari mokasi!')
 
         # if lemmikit:
         #     for lemmikki in lemmikit:
