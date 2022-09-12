@@ -28,7 +28,7 @@ def henkilölistaus():
 
     for h in henkilöt:
         print(h.nimi, h.syntymävuosi)
-        print(h.nimi, "on", h.ikä(), "vuotta vanha.")
+        print(f"{h.nimi:^10} on {h.ikä():3.2f} vuotta vanha.") # :3.2f  format string syntaxis - str.format()
         lemmikit = henkilöiden_lemmikit.get(h.nimi, [])
         for lemmikki in lemmikit:
             print("Lemmikki:", lemmikki)
